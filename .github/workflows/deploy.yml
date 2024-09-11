@@ -1,0 +1,16 @@
+name: Deploy Blog
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: self-hosted
+
+    steps:
+      - name: pull the code
+        run: |
+          cd /var/www/Simple_html_blog
+          git pull
